@@ -1,0 +1,134 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO pes_pwm
+  CLASS BLOCK ;
+  FOREIGN pes_pwm ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 69.610 BY 80.330 ;
+  PIN PWM_OUT
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END PWM_OUT
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 15.320 10.640 16.920 68.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 29.925 10.640 31.525 68.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 44.530 10.640 46.130 68.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 59.135 10.640 60.735 68.240 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 20.520 64.180 22.120 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 34.800 64.180 36.400 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 49.080 64.180 50.680 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 63.360 64.180 64.960 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 12.020 10.640 13.620 68.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 26.625 10.640 28.225 68.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 41.230 10.640 42.830 68.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 55.835 10.640 57.435 68.240 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 17.220 64.180 18.820 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 31.500 64.180 33.100 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 45.780 64.180 47.380 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 60.060 64.180 61.660 ;
+    END
+  END VPWR
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.852000 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 74.840 4.000 75.440 ;
+    END
+  END clk
+  PIN decrease_duty
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 67.710 76.330 67.990 80.330 ;
+    END
+  END decrease_duty
+  PIN increase_duty
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 65.610 3.440 69.610 4.040 ;
+    END
+  END increase_duty
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 63.940 68.085 ;
+      LAYER met1 ;
+        RECT 0.070 9.900 68.010 69.320 ;
+      LAYER met2 ;
+        RECT 0.100 76.050 67.430 76.330 ;
+        RECT 0.100 4.280 67.980 76.050 ;
+        RECT 0.650 3.555 67.980 4.280 ;
+      LAYER met3 ;
+        RECT 4.400 74.440 65.610 75.305 ;
+        RECT 4.000 4.440 65.610 74.440 ;
+        RECT 4.000 3.575 65.210 4.440 ;
+  END
+END pes_pwm
+END LIBRARY
+
